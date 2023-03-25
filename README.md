@@ -1,9 +1,14 @@
 # BG9
 Face Mask Detection
+
 Team Details:
+
 Khajjayam T S Ammullyaaw 19471A0590
+
 Vadigineni Bhargavi 19471A05C6
+
 Pullamsetty Sri Jyothirmai 19471A05B3
+
 Guide:
 Jaya Prakash koyyalamudi
 
