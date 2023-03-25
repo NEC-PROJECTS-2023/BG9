@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color: black;
+                color: azure;
+            }
+	        h1{
+		        font-size:50px;
+                font-weight: 100;
+                text-shadow: 0 0 10px #0e99f6, 0 0 15px #13bcf9;
+	        }
+            .button {
+                background-color: #030303;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                font-weight:bold;
+                margin: 4px 2px;
+                cursor: pointer;
+                box-shadow: 0 6px 20px 0 rgba(3, 143, 199, 0.2), 0 6px 20px 0 rgba(3,143,199,0.2);
+            }     
+            .detectors-container{
+                display:flex;
+		        justify-content:space-evenly;
+            }
+            .detectors-container > div {
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+            }
+	        #mask{
+		        height:450px;
+		        width:700px;
+	        }
+	        .mask-image{
+		        margin-left:400px;
+	        }
+        </style>
+        
+    </head>
+    <body>
+        <h1 align="center">Face Mask Detector</h1>
+	    <div class="mask-image">
+		    <img src="/static/mask-detection-technology.png" alt="face mask" id="mask">
+	    </div>
+        <div class="detectors-container">
+            <div>
+                <a href="/live"><button class="button">Live Detector</button></a>
+            </div>
+            <div>
+                <a href="/image"><button class="button">Image Detector</button></a>
+            </div>
+            <div>
+                <a href="/video"><button class="button">video Detector</button></a>
+            </div>
+        </div>
+    </body>
+
+</html>

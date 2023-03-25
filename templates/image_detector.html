@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <style>
+            body{
+                background-color:black;
+            }
+            h2{
+                color:white;
+                text-shadow: 0 0 10px #0e99f6, 0 0 15px #13bcf9;
+            }
+            input[type=file]{
+                display:none;
+            }
+            .file,.button{
+                background-color: #0f0202;
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                font-size: 16px;
+                font-weight:bold;
+                margin: 4px 2px;
+                cursor: pointer;
+                box-shadow: 0 6px 20px 0 rgba(3, 143, 199, 0.2), 0 6px 20px 0 rgba(3,143,199,0.2);
+            }
+            .upload-container{
+                margin-left:550px;
+                margin-top:100px;
+            }
+            #image{
+                width:280px;
+                height:300px;
+            }
+            .display-image{
+                margin-left:200px;
+                margin-top:100px;
+            }
+            .display-container{
+                display:flex;
+            }
+            .detect{
+                margin-left:200px;
+                margin-top:200px;
+            }
+            .button{
+                margin-left: 100px;
+            }
+            .result-image{
+                margin-left:520px;
+                margin-top:100px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="upload-container">
+            <h2>Upload and Detect Image</h2>
+            <form method="post" action="/image" enctype="multipart/form-data">
+                <label class="file">
+                    <input type="file" name="file"/>
+                    select Image
+                </label>
+                <input type="submit" value="upload & Detect" class="button">
+            </form>
+        </div>
+        
+        {% if filename %}
+            <div class="display-container">
+                <div class="display-image">
+                    <img src="{{ url_for('display_image', filename=filename) }}" id="image">
+                </div>
+                <div class="result-image">
+                    <img src="{{ url_for('detect', filename=filename) }}" id="image">
+                </div>
+            </div>
+        {% endif %}
+    </body>
+</html>
